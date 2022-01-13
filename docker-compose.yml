@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  frontend:
+    build:
+      context: ./duzzy-frontend
+    command: [ "yarn", "run", "dev" ]
+    ports:
+      - 80:3000
+    volumes:
+      - ./duzzy-frontend/:/frontend
+      - ./duzzy-frontend/node_modules/:/frontend/node_modules
+      - /frontend/.next
+    environment:
+      - CI=true
+      - CHOKIDAR_USEPOLLING=true
+    tty: true

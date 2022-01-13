@@ -1,0 +1,3 @@
+[submodule "duzzy-frontend"]
+	path = duzzy-frontend
+	url = https://github.com/Duzzy-SV/duzzy-frontend.git
